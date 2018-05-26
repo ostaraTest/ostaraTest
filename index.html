@@ -1,121 +1,295 @@
-<html  style="height: 100%;">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>FullScreen Backgrounds - fullPage.js</title>
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="./jquery.css" />
+	<link rel="stylesheet" type="text/css" href="./examples.css" />
+	<style>
 
+	/* Style for our header texts
+	* --------------------------------------- */
+	h1{
+		font-size: 5em;
+		font-family: arial,helvetica;
+		color: #fff;
+		margin:0;
+		padding:40px 0 0 0;
+	}
+	h2{
+		color: #fff;
+	}
+	.intro p{
+		color: #fff;
+		padding:40px 0 0 0;
+	}
+
+	/* Centered texts in each section
+	* --------------------------------------- */
+	.section{
+		text-align:center;
+	}
+
+
+	/* Bottom menu
+	* --------------------------------------- */
+	#infoMenu li a {
+		color: #fff;
+	}
+	</style>
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+	<script type="text/javascript" src="./jquery_002.js"></script>
+	<script type="text/javascript" src="./examples.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage'],
+				sectionsColor: ['#4A6FB1', '#939FAA', '#323539', '#4A6FB1', '#4A6FB1'],
+				fitToSection: true,
+				scrollOverflow: false,
+				menu: '#menu',
+				navigation: true,
+				navigationPosition: 'right',
+				navigationTooltips: ['First page', 'Second page', 'Third and last page']				
+			});
+		});
+	</script>
 
 </head>
-<body style="height: 100%; display: flex;">
+<body style="height:100%">
 
-<div class="container-fluid" style="height: 100vh;">
-<div class="row"><div class="col-md-offset-6"><h1>Ostara</h1><div>
+<ul id="menu">
+	<li data-menuanchor="firstPage"><a href="#firstPage">Home</a></li>
+</UL>
+	
+
+<div id="fullpage">
+
+	<div class="section " id="section0">
+		<div class="intro" align=center vertical-align=center>
+			<table width=950 height=700 border=0 style="table-layout: fixed; height:700px; padding-top:0px; margin-top:0px;">
+				<tr>
+					<td><a href="#secondPage"><h2>E-Mental Health</h2><br><img src="./kioskTest_files/topleft.png" height="250" width="445"></a></td>
+					<td><a href="#thirdPage"><h2>Job Search Training</h2><br><img src="./kioskTest_files/topright.png" height="250" width="445"></a></td>
+				</tr>
+				<tr>
+					<td><a href="#fourthPage"><h2>Brain Training</h2><br><img src="./kioskTest_files/botleft.png" height="250" width="445"></a></td>
+					<td><a href="#fifthPage"><h2>Free Education</h2><br><img src="./kioskTest_files/botright.png" height="250" width="445"></a></td>
+				</tr>				
+			</table>
+		</div>
+
+
+
+	</div>
+	<div class="section" id="section1">
+		<div class="intro" align=center vertical-align=center>
+			<table width=950 height=700 border=0 style="table-layout: fixed; height:700px; padding-top:0px; margin-top:0px;">
+				<tr>
+					<td style="vertical-align:top; text-align:center;">
+						<a href="https://moodgym.com.au/">
+						<h2>Mood Gym</h2>
+						<img src="./kioskTest_files/image002.png" height="125" width="222">
+						<p><span style="text-align:left;">
+Moodgym is like an interactive self-help book which helps you to learn and practise skills which can help to prevent and manage symptoms of depression and anxiety.
+						</span></p>
+						</a>
+					</td>
+					<td style="vertical-align:top; text-align:center;">
+						<a href="https://ecouch.anu.edu.au/welcome">
+						<h2>E-Couch</h2>
+						<img src="./kioskTest_files/image003.png" height="125" width="222">
+						<p>
+						E-couch is a self-help interactive program with modules for depression, generalised anxiety & worry, social anxiety, relationship breakdown, and loss & grief. 
+						It provides evidence-based information and teaches strategies drawn from cognitive, behavioural and interpersonal therapies as well as relaxation and physical 
+						activity.
+						</p>
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td style="vertical-align:top; text-align:center;">
+						<a href="http://www.emhprac.org.au/">
+						<h2>eMHPrac</h2>
+						<img src="./kioskTest_files/image016.png" height="125" width="222">
+						<p>
+						eMHPrac provides free e-mental health training and support for health practitioners – GPs, Allied Health Professionals, and service providers working with Aboriginal and Torres Strait Islander people.
+						</p>
+						</a>
+					</td>
+					<td style="vertical-align:top; text-align:center;">
+						<a href="https://www.smilingmind.com.au/">
+						<h2>Smiling Mind</h2>
+						<img src="./kioskTest_files/image019.jpg" height="125" width="222">
+						<p>
+						Smiling Mind are a 100% not-for-profit organisation that works to make mindfulness accessible to all.
+						</p>
+						</a>
+					</td>
+				</tr>				
+			</table>
+		</div>
+	</div>
+	<div class="section" id="section2">
+		<div class="intro" align=center vertical-align=center>
+			<table width=950 height=700 border=0 style="table-layout: fixed; height:700px; padding-top:0px; margin-top:0px;">
+			<tr>
+					<td style="vertical-align:top; text-align:center;">
+						<a href="https://joboutlook.gov.au/">
+						<h2>Job Outlook</h2>
+						<img src="./kioskTest_files/image004.png" height="125" width="222">
+						<p><span style="text-align:left;">
+Job Outlook can help you make decisions about study and training, your first job, or the next step in your career.
+						</span></p>
+						</a>
+					</td>			
+					<td style="vertical-align:top; text-align:center;">
+						<a href="https://myfuture.edu.au/">
+						<h2>My Future</h2>
+						<img src="./kioskTest_files/image005.png" height="125" width="222">
+						<p><span style="text-align:left;">
+Take the first steps to managing your career. Discover your strengths to help make the right career decisions for you. 
+						</span></p>
+						</a>
+					</td>					
+			</tr>
+			<tr>
+					<td style="vertical-align:top; text-align:center;">
+						<a href="">
+						<h2>Tutorial: Interviewing Skills</h2>
+						<img src="./kioskTest_files/image012.png" height="125" width="222">
+						<p><span style="text-align:left;">
+-
+						</span></p>
+						</a>
+					</td>	
+					<td style="vertical-align:top; text-align:center;">
+						<a href="http://career-advice.careerone.com.au/job-interview-tips/interview-questions/job-interviews-advice-tips-how-to-videos/article.aspx">
+						<h2>Career One Interview Tips</h2>
+						<img src="./kioskTest_files/image014.png" height="125" width="222">
+						<p><span style="text-align:left;">
+Although there is no set format that every job interview will follow, there are some questions that you can almost guarantee will crop up. Here’s a list of the most common questions and a guide to the kind of answers your interviewer wants to hear. 
+						</span></p>
+						</a>
+					</td>						
+			</tr>			
+			</table>
+		</div>
+	</div>
+	<div class="section" id="section3">
+		<div class="intro" align=center vertical-align=center>
+			<table width=950 height=700 border=0 style="table-layout: fixed; height:700px; padding-top:0px; margin-top:0px;">
+			<tr>
+					<td style="vertical-align:top; text-align:center;">
+						<a href="">
+						<h2>Scientific Brain Training</h2>
+						<img src="./kioskTest_files/image007.png" height="125" width="222">
+						<p><span style="text-align:left;">
+						???
+						</span></p>
+						</a>
+					</td>			
+					<td style="vertical-align:top; text-align:center;">
+						<a href="https://www.lumosity.com/">
+						<h2>Luminosity</h2>
+						<img src="./kioskTest_files/image008.png" height="125" width="222">
+						<p><span style="text-align:left;">
+Enjoy brain training created by scientists and game designers. Start your training with 50+ cognitive games today.
+						</span></p>
+						</a>
+					</td>					
+			</tr>
+			<tr>
+					<td style="vertical-align:top; text-align:center;">
+						<a href="https://www.brainhq.com/">
+						<h2>Brain HQ</h2>
+						<img src="./kioskTest_files/image009.png" height="125" width="222">
+						<p><span style="text-align:left;">
+Rigorous training for better brain health
+						</span></p>
+						</a>
+					</td>	
+					<td style="vertical-align:top; text-align:center;">
+						<a href="https://www.mindgames.com/">
+						<h2>Mind Games</h2>
+						<img src="./kioskTest_files/image010.png" height="125" width="222">
+						<p><span style="text-align:left;">
+Play the best free Mind Games online with brain, math, puzzle and word games, sudokus and memory games. The games are playable on desktop, tablet and mobile (Android, iOS, Windows Mobile).
+						</span></p>
+						</a>
+					</td>						
+			</tr>			
+			</table>
+		</div>
+	</div>
+	<div class="section" id="section4" align=center vertical-align=center>
+		<div class="intro"  align=center vertical-align=center>
+			<table width=950 height=700 border=0 style="table-layout: fixed; height:700px; padding-top:0px; margin-top:0px;">
+			<tr>
+					<td style="vertical-align:top; text-align:center;">
+						<a href="https://www.opencolleges.edu.au/">
+						<h2>Open Colleges</h2>
+						<img src="./kioskTest_files/image013.png" height="125" width="222">
+						<p><span style="text-align:left;">
+Providing life changing education for over 100 years. We offer over 100 flexible online courses that allow you to fit study around your lifestyle.
+						</span></p>
+						</a>
+					</td>			
+					<td style="vertical-align:top; text-align:center;">
+						<a href="https://www.open2study.com/">
+						<h2>Open 2 Study</h2>
+						<img src="./kioskTest_files/image015.png" height="125" width="222">
+						<p><span style="text-align:left;">
+Open2Study provides free, specialised short courses, entirely online, across the world, in a range of subject areas.
+						</span></p>
+						</a>
+					</td>					
+			</tr>
+			<tr>
+					<td style="vertical-align:top; text-align:center;">
+						<a href="https://www.khanacademy.org/">
+						<h2>Khan Acadamy</h2>
+						<img src="./kioskTest_files/image022.jpg" height="125" width="222">
+						<p><span style="text-align:left;">
+You can learn anything. For free. For everyone. Forever.
+						</span></p>
+						</a>
+					</td>	
+					<td style="vertical-align:top; text-align:center;">
+						<a href="https://www.coursera.org/">
+						<h2>Coursera</h2>
+						<img src="./kioskTest_files/image011.jpg" height="125" width="222">
+						<p><span style="text-align:left;">
+Take the world's best courses, online.
+						</span></p>
+						</a>
+					</td>						
+			</tr>			
+			</table>
+		</div>
+	</div>	
 </div>
 
-<div class="row">
-	<div class="col-sm">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-sm"><h3>E-Mental Health</h3></div>
-			</div>
-			<div class="row no-gutters">
-				<div class="col-sm">
-					<a href=""><img class="img-fluid rounded" style="min-width: 100%;" src="https://ostaratest.github.io/ostaraTest/kioskTest_files/image002.png"></a>
-				</div>
-				<div class="col-sm">
-					<a href=""><img class="img-fluid rounded" style="min-width: 100%;" src="https://ostaratest.github.io/ostaraTest/kioskTest_files/image003.png"></a>
-				</div>
-			</div>
-			<div class="row no-gutters">
-				<div class="col-sm">
-					<a href=""><img class="img-fluid rounded" style="min-width: 100%;" src="https://ostaratest.github.io/ostaraTest/kioskTest_files/image020.jpg"></a>
-				</div>
-				<div class="col-sm">
-					<a href=""><img class="img-fluid rounded" style="min-width: 100%;" src="https://ostaratest.github.io/ostaraTest/kioskTest_files/image001.png"></a>
-				</div>
-			</div>
+<div id="infoMenu">
+	
 
-		</div>	
-	</div>
-	<div class="col-sm">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-sm"><h3>Job Search Training</h3></div>
-			</div>
-			<div class="row no-gutters">
-				<div class="col-sm">
-					<a href=""><img class="img-fluid rounded" style="min-width: 100%;" src="https://ostaratest.github.io/ostaraTest/kioskTest_files/image004.png"></a>
-				</div>
-				<div class="col-sm">
-					<a href=""><img class="img-fluid rounded" style="min-width: 100%;" src="https://ostaratest.github.io/ostaraTest/kioskTest_files/image005.png"></a>
-				</div>
-			</div>
-			<div class="row no-gutters">
-				<div class="col-sm">
-					<a href=""><img class="img-fluid rounded" style="min-width: 100%;" src="https://ostaratest.github.io/ostaraTest/kioskTest_files/image012.png"></a>
-				</div>
-				<div class="col-sm">
-					<a href=""><img class="img-fluid rounded" style="min-width: 100%;" src="https://ostaratest.github.io/ostaraTest/kioskTest_files/image014.png"></a>
-				</div>
-			</div>
 
-		</div>	
-	</div>
-</div>
+</ul>
 
-<div class="row">
-	<div class="col-sm">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-sm"><h3>Brain Training</h3></div>
-			</div>
-			<div class="row no-gutters">
-				<div class="col-sm">
-					<a href=""><img class="img-fluid rounded" style="min-width: 100%;" src="https://ostaratest.github.io/ostaraTest/kioskTest_files/image007.png"></a>
-				</div>
-				<div class="col-sm">
-					<a href=""><img class="img-fluid rounded" style="min-width: 100%;" src="https://ostaratest.github.io/ostaraTest/kioskTest_files/image008.png"></a>
-				</div>
-			</div>
-			<div class="row no-gutters">
-				<div class="col-sm">
-					<a href=""><img class="img-fluid rounded" style="min-width: 100%;" src="https://ostaratest.github.io/ostaraTest/kioskTest_files/image009.png"></a>
-				</div>
-				<div class="col-sm">
-					<a href=""><img class="img-fluid rounded" style="min-width: 100%;" src="https://ostaratest.github.io/ostaraTest/kioskTest_files/image010.png"></a>
-				</div>
-			</div>
-
-		</div>	
-	</div>
-	<div class="col-sm">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-sm"><h3>Free Education</h3></div>
-			</div>
-			<div class="row no-gutters">
-				<div class="col-sm">
-					<a href=""><img class="img-fluid rounded" style="min-width: 100%;" src="https://ostaratest.github.io/ostaraTest/kioskTest_files/image013.png"></a>
-				</div>
-				<div class="col-sm">
-					<a href=""><img class="img-fluid rounded" style="min-width: 100%;" src="https://ostaratest.github.io/ostaraTest/kioskTest_files/image015.png"></a>
-				</div>
-			</div>
-			<div class="row no-gutters">
-				<div class="col-sm">
-					<a href=""><img class="img-fluid rounded" style="min-width: 100%;" src="https://ostaratest.github.io/ostaraTest/kioskTest_files/image022.jpg"></a>
-				</div>
-				<div class="col-sm">
-					<a href=""><img class="img-fluid rounded" style="min-width: 100%;" src="https://ostaratest.github.io/ostaraTest/kioskTest_files/image011.jpg"></a>
-				</div>
-			</div>
-
-		</div>	
-	</div>
-</div>
 
 </div>
+
 </body>
 </html>
